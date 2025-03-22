@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords"
+        content=" Slipper socks,Ear-band,Premiun socks,Libro de reclamaciones virtual de Suyoq.com,Libro de reclamaciones virtual,Suyoq">
+    <meta name="description" content="Libro de reclamaciones Virtual de Suyoq.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    Falta SEO para la pagina web-->
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Libro de Reclamaciones Virtual</title>
+</head>
+
+<body onload="resetear();">
+    <!--region Menu-->
+    <nav class="navbar navbar-expand-lg justify-content-center bg-color-fondo">
+        <a class="navbar-brand mx-auto" href="index.html">
+            <img class="img-fluid logo-suyoq-w-min2" src="img/nosotros/logo textil viso blanco.png" alt="logo Suyoq">
+        </a>
+        <div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-2 active">
+                    <a class="nav-link text-uppercase" href="index.html"><i class="text-light fas fa-backward"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-color-fondo">
+        <!--  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo Heiss"></a>-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarprincipal"
+            aria-controls="navbarprincipal" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarprincipal">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-4 active">
+                    <a class="nav-link text-uppercase text-light text-center" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle text-uppercase text-light text-center" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Coleccion
+                    </a>
+                    <div class="dropdown-menu bg-color-fondo" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-uppercase text-light" href="slippersocks.html">Slipper Socks</a>
+                        <a class="dropdown-item text-uppercase text-light" href="premiumsocks.html">Premium Socks</a>
+                        <a class="dropdown-item text-uppercase text-light" href="alpacaearband.html">Alpaca Ear Banc</a>
+                    </div>
+                </li>
+                <li class="nav-item px-4 active">
+                    <a class="nav-link text-uppercase text-light text-center" href="contactanos.html">Contáctanos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--endregion Fin Menu-->
+
+    <div class="container py-5">
+
+        <div style="background: #eeeeee">
+            <div class="row p-0">
+                <div class="col-sm-12 d-flex flex-column justify-content-center">
+                    <h3 class="display-3 text-center">LIBRO DE RECLAMACIONES </h3>
+                    <h3 class="display-4 text-center">TEXTIL VISO SAC </h3>
+                    <p class="text-center">RUC: 20413382531</p>
+                </div>
+            </div>
+            <div class="row px-5 flex-column">
+                <form action="enviar-correo.php" method="post" id="FVC">
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="establecimiento">Establecimiento</label>
+                            <input type="text" id="establecimiento" name="establecimiento" class="form-control"
+                                placeholder="Establecimiento: Portal Web, Tienda, Etc" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="text-uppercase" style="font-weight: bold">
+                        Identificación del Consumidor
+                    </p>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <label for="nombrecliente">Nombre</label>
+                            <input type="text" id="nombrecliente" name="nombrecliente" class="form-control"
+                                placeholder="Nombre" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ\s ]+"
+                                oninvalid="setCustomValidity('Completa este campo solo con letras')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="apellidopaterno">Apellido Paterno</label>
+                            <input type="text" id="apellidopaterno" name="apellidopaterno" class="form-control"
+                                placeholder="Apellido Paterno" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ\s ]+"
+                                oninvalid="setCustomValidity('Completa este campo solo con letras')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="apellidomaterno">Apellido Materno</label>
+                            <input type="text" id="apellidomaterno" name="apellidomaterno" class="form-control"
+                                placeholder="Apellido Materno" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ\s ]+"
+                                oninvalid="setCustomValidity('Completa este campo solo con letras')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="direccioncliente">Dirección</label>
+                            <input type="text" id="direccioncliente" name="direccioncliente" class="form-control"
+                                placeholder="Dirección" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="tipodocumento">Tipo de Documento de Identidad</label>
+                            <select class="custom-select my-1 mr-sm-2" id="tipodocumento" name="tipodocumento"
+                                oninvalid="setCustomValidity('Seleccione el Tipo de Documento')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                                <option selected></option>
+                                <option value="DNI">DNI</option>
+                                <option value="C.E.">C.E.</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                                <option value="RUC">RUC</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="documentoidentidad">Numero Documento Identidad</label>
+                            <input type="text" id="documentoidentidad" name="documentoidentidad" class="form-control"
+                                placeholder="Numero Documento Identidad" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="telefonocliente">Teléfono</label>
+                            <input type="tel" id="telefonocliente" name="telefonocliente" class="form-control"
+                                placeholder="Teléfono" pattern="[0-9]{2,3}-[0-9]{6,7}|[0-9]{9}"
+                                oninvalid="setCustomValidity('El formato del número debe ser: \n Fijo: código de ciudad - número fijo \n o \n Celular: 9 dígitos')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="emailcliente">Email</label>
+                            <input type="email" id="emailcliente" name="emailcliente" class="form-control"
+                                placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="edadcliente">Edad</label>
+                            <input type="number" id="edadcliente" name="edadcliente" class="form-control"
+                                placeholder="Edad" min="13" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="text-uppercase" style="font-weight: bold">
+                        Identificación del bien contratado
+                    </p>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="tipo-compra">Tipo del bien contratado</label>
+                            <select class="custom-select my-1 mr-sm-2" id="tipo-compra" name="tipo-compra"
+                                oninvalid="setCustomValidity('Seleccione el Tipo de compra')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                                <option selected></option>
+                                <option value="Producto">Producto</option>
+                                <option value="Servicio">Servicio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="text-uppercase" style="font-weight: bold">
+                        Identificación del bien contratado
+                    </p>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="tipomoneda">Moneda</label>
+                            <select class="custom-select my-1 mr-sm-2" id="tipomoneda" name="tipomoneda"
+                                oninvalid="setCustomValidity('Seleccione su Moneda')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                                <option selected></option>
+                                <option value="Soles">Soles</option>
+                                <option value="Dolares">Dolares</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="importecompra">Importe</label>
+                            <input type="number" id="importecompra" name="importecompra" class="form-control"
+                                placeholder="Importe" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="descripcionreclamo">Descripción</label>
+                            <textarea class="form-control" id="descripcionreclamo" name="descripcionreclamo"
+                                placeholder="Descripción" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    <p class="text-uppercase" style="font-weight: bold">
+                        Detalles de la reclamación y pedido del consumidor
+                    </p>
+                    <p>Reclamo : Disconformidad relacionada a los productos o servicios.</p>
+                    <p>Queja : Disconformidad no relacionada a los productos o servicios; o malestar o descontento
+                        respecto
+                        a la atención al público.</p>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="reclamo-queja">Reclamo o Queja</label>
+                            <select class="custom-select my-1 mr-sm-2" id="reclamo-queja" name="reclamo-queja"
+                                oninvalid="setCustomValidity('Seleccione una de las opciones')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+                                <option selected></option>
+                                <option value="Reclamo">Reclamo</option>
+                                <option value="Queja">Queja</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="detallereclamo">Detalle del Reclamo o Queja</label>
+                            <textarea class="form-control" id="detallereclamo" name="detallereclamo"
+                                placeholder="Detalle del Reclamo o Queja" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="detallepedido">Detalle del Pedido</label>
+                            <textarea class="form-control" id="detallepedido" name="detallepedido"
+                                placeholder="Detalle del Pedido" rows="4" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <button class="btn btn-dark" id="btnreclamo" type="submit">ENVIAR RECLAMO</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modales de envio y metodo de pago -->
+    <div class="modal fade" id="pago" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 72px;">
+                <div class="modal-header d-flex justify-content-center align-items-center bg-color-fondo"
+                    style="border-top-left-radius: 72px; border-top-right-radius: 72px;">
+                    <h3 class="text-center text-white" style="font-weight: bold;">METODOS DE PAGO</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center m-3">
+                        <img src="img/footer/pago_metodos.webp" class="img-fluid d-block w-100" alt="Metodos de pago">
+                    </div>
+                    <button type="button" class="close mr-3" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: #fe0000;">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="envio" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 72px;">
+                <div class="modal-header d-flex justify-content-center align-items-center bg-color-fondo"
+                    style="border-top-left-radius: 72px; border-top-right-radius: 72px;">
+                    <h3 class="text-center text-white" style="font-weight: bold;"> ENVÍOS</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class=" row d-flex justify-content-center">
+                            <img class="py-3 " src="img/logos/olva1.png" alt="Logo Heiss" width="200px">
+                            <h4 class="text-justify mt-2 mb-3 px-3"
+                                style="font-weight:200px; font-family:Arial, Helvetica, sans-serif;">ENVÍOS SEGUROS Y
+                                SIN DEMORA
+                            </h4>
+                            <a type="button" href="https://www.olvacourier.com/calculadora-de-envios/" target="_blank"
+                                class="btn btn-warning btn-lg btnCotizar text-white mt-1">COTIZAR ENVÍO</a>
+                        </div>
+                    </div>
+                    <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: #fe0000;">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-color-fondo">
+        <div class="row text-light m-0 justify-content-start">
+            <div class="col-sm-4 p-5">
+                <h2 class="text-center">
+                    SIGUENOS
+                </h2>
+                <div class="d-flex justify-content-center px-5">
+                    <a href="https://www.facebook.com/Suyoq-101318728331753/" class="text-light px-3 size-icon"
+                        target="_blank"><i class=" fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/suyoq/?utm_medium=copy_link" class="text-light px-3 size-icon"
+                        target="_blank"><i class=" fab fa-instagram"></i></a>
+                </div>
+                <h2 class="text-center pt-5">HORARIO DE ATENCIÓN:</h2>
+                <p class="text-center">De Lunes a Viernes de 9 a 12 hrs. y de 14 a 17 hrs. </p>
+                <div class="row d-flex justify-content-center">
+                    <p class="text-center">
+                        <strong>Correo de servicio al Cliente:</strong>
+                        <br>
+                        operaciones@textilviso.com
+                    </p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p><i class="fa fa-phone fa fa-rotate-90" aria-hidden="true"></i> 054 347146
+                        <br>
+                        <i class="fa fa-phone fa fa-rotate-90" aria-hidden="true"></i> +51 987826139
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 p-5">
+                <h2 class="text-center">SERVICIO AL CLIENTE</h2>
+                <ul>
+                    <li><a class="text-light" href="#" data-toggle="modal" data-target="#envio">Envíos</a></li>
+                    <li><a class="text-light" href="#" data-toggle="modal" data-target="#pago">Métodos de Pago</a></li>
+                    <li><a class="text-light" href="cambios-devoluciones.html">Política de Cambios</a></li>
+                    <li><a class="text-light" href="privacy.html">Política de Privacidad</a></li>
+                    <li><a class="text-light" href="ventas.html">Ventas Corporativas</a></li>
+                    <li><a class="text-light" href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="text-light" href="libro-reclamaciones.html">Libro de Reclamaciones Virtual</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 p-5">
+                <form action="enviar_suscripcion.php" method="post" name="form" onsubmit="return marcado();"
+                    class="d-flex flex-column align-items-center justify-content-center" id="FVS">
+                    <h2 class="text-center">SUSCRÍBETE</h2>
+                    <div class="form-group form-check">
+                        <label class="form-check-label" for="exampleCheck1">Se el primero en saber las novedades y
+                            promociones que tiene heissocks.com para ti</label>
+                    </div>
+                    <div class="form-group w-100">
+                        <input type="email" class="form-control form-heiss" id="txtcorreo" name="txtcorreo"
+                            placeholder="Correo Electronico" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="termin">
+                        <label class="form-check-label" for="exampleCheck1">Estoy de Acuerdo con las <a
+                                href="privacy.html" class="text-white">políticas de privacidad</a> de la página</label>
+                    </div>
+                    <button type="submit" id="suscribirse" class="btn btn-danger px-5">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="row m-0 text-light">
+            <div class="col-sm-12 d-flex justify-content-center pb-4">
+                <a href="slippersocks.html"><img class="img-logo-marca-footer"
+                        src="img/logos/LOGO-SUYOC-CLARO-SIN-FONDO.png" alt="logo suyoq"></a>
+            </div>
+        </div>
+        <div class="row m-0 text-light">
+            <div class="col-sm-12">
+                <p class="text-center">© <span id="anio"></span> Suyoq.com by Textil Viso SAC</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/all.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/app.js"></script>
+<script src="js/script.js"></script>
+
+</html>

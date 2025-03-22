@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Slipper socks,Ear-band,Premiun socks,Suyoq">
+    <meta name="description" content="Venta de Calcetines Slipper socks, Ear-band, Premiun socks">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!--    <link rel="stylesheet" href="css/owl.carousel.css">-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!--    <link rel="stylesheet" href="css/owl.theme.default.css">-->
+    <link rel="stylesheet" href="css/splide-sea-green.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ventas Corporativas Suyoq.com</title>
+</head>
+
+<body onload="resetear();">
+    <!--Menu-->
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-center bg-color-fondo">
+        <a class="navbar-brand mx-auto" href="index.html">
+            <img class="img-fluid logo-suyoq-w-min" src="img/logos/LOGO-SUYOC-CLARO-SIN-FONDO.png" alt="logo Suyoq">
+        </a>
+    </nav>
+    <div class="bg-color-fondo text-center text-white ">
+        <h2 class="p-2">VENTAS CORPORATIVAS</h2>
+    </div>
+    <!--Contenedor Principàl-->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3 mb-3">
+            <div class="row my-4 mb-5">
+                <div class="col-sm-12 d-flex justify-content-center my-3">
+                    <h3 class="modal-title ml-2 ml-sm-0">
+                        ELEGIR METODO DE COTIZACIÓN</h3>
+                </div>
+                <div class="col-sm-6 d-flex justify-content-center mt-4 text-center">
+                    <div class="btn-whatsapp text-center ml-md-5">
+                        <a href="https://wa.link/qaib1t" target="_blank"><img class="img-fluid" src="img/whatsapp.svg"
+                                alt="whatsapp" width="60px" height="60px"></a>
+                        <p class="pt-3 text-center">WhatsApp</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 d-flex justify-content-center mt-4 text-center">
+                    <div class="btn-whatsapp text-center mr-md-5 ">
+                        <a href="#"><img id="mailventas" class="img-fluid" src="img/mail.svg" alt="mail" width="60px"
+                                height="60px"></a>
+                        <p class="pt-3 text-center">Correo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4 mt-5" id="rowventas" style="display: none;">
+                <div class="col-sm-12 d-flex justify-content-center my-3">
+                    <h5 class="text-center">PARA CONTINUAR POR FAVOR <br>
+                        COMPLETA EL SIGUIENTE FORMULARIO DEL CORREO</h5>
+                </div>
+                <div class="col-sm-12  my-3 " id="formventas">
+                    <form action="enviar_corp.php" method="post" class="form_contact bg-white" id="FVC">
+                        <label for="names">Nombre Completo *</label>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" style="border-radius: 25px;" id="names"
+                                name="nombre" placeholder="Nombre Completo" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ\s ]+"
+                                oninvalid="setCustomValidity('El nombre no pude tener números')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+
+                        </div>
+                        <label for="email">Correo Electrónico *</label>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" style="border-radius: 25px;" id="email"
+                                name="correo" placeholder="Correo Electrónico" required>
+
+                        </div>
+                        <label for="tel">Número de celular *</label>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" style="border-radius: 25px;" id="tel" name="telefono"
+                                placeholder="Número de celular" maxlength="9" pattern="[0-9]{9}"
+                                oninvalid="setCustomValidity('El numero debe tener 9 dígitos')"
+                                onchange="try{setCustomValidity('')}catch(e){}" required>
+
+                        </div>
+                        <label for="mensaje">Mensaje *</label>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" style="border-radius: 25px;" name="mensaje"
+                                placeholder="Escriba un mensaje" id="mensaje" required></textarea>
+
+                        </div>
+                        <div class="d-flex justify-content-center mt-5 mb-5">
+                            <input type="submit" value="Enviar Mensaje"
+                                class="btn btn-danger btn-lg btn_MasInfo bg-danger" id="btnSend">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modales de envio y metodo de pago -->
+    <div class="modal fade" id="pago" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 72px;">
+                <div class="modal-header d-flex justify-content-center align-items-center bg-color-fondo"
+                    style="border-top-left-radius: 72px; border-top-right-radius: 72px;">
+                    <h3 class="text-center text-white" style="font-weight: bold;">METODOS DE PAGO</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center m-3">
+                        <img src="img/footer/pago_metodos.webp" class="img-fluid d-block w-100" alt="Metodos de pago">
+                    </div>
+                    <button type="button" class="close mr-3" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: #fe0000;">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="envio" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 72px;">
+                <div class="modal-header d-flex justify-content-center align-items-center bg-color-fondo"
+                    style="border-top-left-radius: 72px; border-top-right-radius: 72px;">
+                    <h3 class="text-center text-white" style="font-weight: bold;"> ENVÍOS</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class=" row d-flex justify-content-center">
+                            <img class="py-3 " src="img/logos/olva1.png" alt="Logo Heiss" width="200px">
+                            <h4 class="text-justify mt-2 mb-3 px-3"
+                                style="font-weight:200px; font-family:Arial, Helvetica, sans-serif;">ENVÍOS SEGUROS Y
+                                SIN DEMORA
+                            </h4>
+                            <a type="button" href="https://www.olvacourier.com/calculadora-de-envios/" target="_blank"
+                                class="btn btn-warning btn-lg btnCotizar text-white mt-1">COTIZAR ENVÍO</a>
+                        </div>
+                    </div>
+                    <button type="button" class="close mr-4" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: #fe0000;">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-color-fondo">
+        <div class="row text-light m-0 justify-content-start">
+            <div class="col-sm-4 p-5">
+                <h2 class="text-center">
+                    SIGUENOS
+                </h2>
+                <div class="d-flex justify-content-center px-5">
+                    <a href="https://www.facebook.com/Suyoq-101318728331753/" class="text-light px-3 size-icon"
+                        target="_blank"><i class=" fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/suyoq/?utm_medium=copy_link" class="text-light px-3 size-icon"
+                        target="_blank"><i class=" fab fa-instagram"></i></a>
+                </div>
+                <h2 class="text-center pt-5">HORARIO DE ATENCIÓN:</h2>
+                <p class="text-center">De Lunes a Viernes de 9 a 12 hrs. y de 14 a 17 hrs. </p>
+                <div class="row d-flex justify-content-center">
+                    <p class="text-center">
+                        <strong>Correo de servicio al Cliente:</strong>
+                        <br>
+                        operaciones@textilviso.com
+                    </p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p><i class="fa fa-phone fa fa-rotate-90" aria-hidden="true"></i> 054 347146
+                        <br>
+                        <i class="fa fa-phone fa fa-rotate-90" aria-hidden="true"></i> +51 987826139
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 p-5">
+                <h2 class="text-center">SERVICIO AL CLIENTE</h2>
+                <ul>
+                    <li><a class="text-light" href="#" data-toggle="modal" data-target="#envio">Envíos</a></li>
+                    <li><a class="text-light" href="#" data-toggle="modal" data-target="#pago">Métodos de Pago</a></li>
+                    <li><a class="text-light" href="cambios-devoluciones.html">Política de Cambios</a></li>
+                    <li><a class="text-light" href="privacy.html">Política de Privacidad</a></li>
+                    <li><a class="text-light" href="ventas.html">Ventas Corporativas</a></li>
+                    <li><a class="text-light" href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="text-light" href="libro-reclamaciones.html">Libro de Reclamaciones Virtual</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 p-5">
+                <form action="enviar_suscripcion.php" method="post" name="form" onsubmit="return marcado();"
+                    class="d-flex flex-column align-items-center justify-content-center" id="FVS">
+                    <h2 class="text-center">SUSCRÍBETE</h2>
+                    <div class="form-group form-check">
+                        <label class="form-check-label" for="exampleCheck1">Se el primero en saber las novedades y
+                            promociones que tiene heissocks.com para ti</label>
+                    </div>
+                    <div class="form-group w-100">
+                        <input type="email" class="form-control form-heiss" id="txtcorreo" name="txtcorreo"
+                            placeholder="Correo Electronico" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="termin">
+                        <label class="form-check-label" for="exampleCheck1">Estoy de Acuerdo con las <a
+                                href="privacy.html" class="text-white">políticas de privacidad</a> de la página</label>
+                    </div>
+                    <button type="submit" id="suscribirse" class="btn btn-danger px-5">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="row m-0 text-light">
+            <div class="col-sm-12 d-flex justify-content-center pb-4">
+                <a href="slippersocks.html"><img class="img-logo-marca-footer"
+                        src="img/logos/LOGO-SUYOC-CLARO-SIN-FONDO.png" alt="logo suyoq"></a>
+            </div>
+        </div>
+        <div class="row m-0 text-light">
+            <div class="col-sm-12">
+                <p class="text-center">© <span id="anio"></span> Suyoq.com by Textil Viso SAC</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/all.js"></script>
+<script src="js/script.js"></script>
+<script src="js/splide.js"></script>
+<script src="js/app.js"></script>
+<script src="/js/script.js"></script>
+
+</html>
